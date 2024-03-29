@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}V.Parrot - Nos véhicules{% endblock %}
+
+{% block body %}
+
+<nav class="vehicules-navbar">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+</nav>
+
+<section class="vehicules-section">
+
+    <h3 class="title-section">Nos véhicules d’occasions</h3>
+    <p class="subtitle-section">Achetez votre prochain véhicule sur le garage V.Parrot</p>
+
+    <div class="occasion-cards vehicules-cards">
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car1.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Mercedes</h5>
+                <h6 class="model">AMG-G63</h6>
+                <p class="card-text">2002 | 5 places | Automatique | 120.000km | électrique</p>
+                <h5 class="price">80 000 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car2.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Subaru</h5>
+                <h6 class="model">WRX STI S</h6>
+                <p class="card-text">2018 | 5 places | Manuelle | 92 573km | essence</p>
+                <h5 class="price">30 000 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car3.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
+
+            <div class="card-body">
+                <h5 class="card-title">Peugeot</h5>
+                <h6 class="model">Peugeot 208</h6>
+                <p class="card-text">2020 | 5 places | Automatique | 50 650km | essence</p>
+                <h5 class="price">17 890 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="occasion-cards vehicules-cards">
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car1.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Produit 1</h5>
+                <h6 class="model">Modele 1</h6>
+                <p class="card-text">Annee | Places | Manu/Auto | KM | Energie </p>
+                <h5 class="price">Prix €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car2.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Produit 2</h5>
+                <h6 class="model">Modele 2</h6>
+                <p class="card-text">Annee | Places | Manu/Auto | KM | Energie </p>
+                <h5 class="price">Prix €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car3.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Produit 3</h5>
+                <h6 class="model">Modele 3</h6>
+                <p class="card-text">Annee | Places | Manu/Auto | KM | Energie </p>
+                <h5 class="price">Prix €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+    
+    </div>
+
+</section>
+
+{% endblock %}
