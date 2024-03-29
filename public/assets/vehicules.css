@@ -1,0 +1,33 @@
+.vehicules-navbar, .vehicules-section{
+  background-color: white;
+}
+
+.breadcrumb{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+.breadcrumb-item > a{
+  color: var(--red);
+  margin-left: 1rem;
+}
+
+.breadcrumb-item.active, .breadcrumb-item+.breadcrumb-item::before{
+  color: #898989;
+}
+
+.vehicules-section {
+  padding-top: 2%;
+}
+
+.vehicules-cards {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.vehicules-card {
+  box-shadow: 3px 3px 10px #bdbdbd;
+  margin: 0 2%;
+}
