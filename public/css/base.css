@@ -10,21 +10,16 @@
 }
 
 :root{
-
-  /* --font-title1: 'Ephesis', cursive;
-  --font-title2: 'Quicksand', serif;
-  --font-p: 'Montserrat', sans-serif;
-  --font-size-title: 112px;
-  --font-size-p: 18px;
-  --font-size-button1: 20px;
-  --font-size-button2: 24px; */
   --red: #ff4646;
   --red-font: #ff4646;
   --semi-black: #0b0b0b;
   --grey-background: #eeeeee;
   --black: #000000;
   --white: #ffffff;
+}
 
+a{
+  text-decoration: none;
 }
 
 .navbar-nav, .me-auto, .mb-2, .mb-lg-0 {
