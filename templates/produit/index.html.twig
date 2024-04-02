@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product Name{% endblock %}
+
+{% block body %}
+
+<section class="product-section">
+
+    <article class="product-presentation">
+
+        <div class="product-container img-container">
+
+            <img src="../img/car1.jpg" alt="" class="product-img">
+
+            <div class="product-gallery">
+
+                <div class="img-galerie img1"></div>
+                <div class="img-galerie img2"></div>
+                <div class="img-galerie img3"></div>
+                <div class="img-galerie img4"></div>
+                <div class="img-galerie img5"></div>
+
+            </div>
+
+        </div>
+
+        <div class="product-container product-infos">
+
+            <h1 class="product-title">Mercedes AMG-G63</h1>
+            <ul class="product-description">
+                <li><i class="fa-solid fa-car feature-icon"></i><span class="product-feature">Marque :</span> Mercedes</li>
+                <li><i class="fa-solid fa-car feature-icon"></i><span class="product-feature">Modèle :</span> AMG-G63</li>
+                <li><i class="fa-regular fa-calendar feature-icon"></i><span class="product-feature">Mise en circulation :</span> 2002</li>
+                <li><img src="../img/icon/seat2.png" alt="" width="16px" class="feature-icon"><span class="product-feature">Nombre de places :</span> 5 places</li>
+            </ul>
+
+            <ul class="product-description">
+                <li><img src="../img/icon/gearbox.png" alt="" width="16px" class="feature-icon"><span class="product-feature">Type de boite :</span> Automatique</li>
+                <li><i class="fa-solid fa-road feature-icon"></i><span class="product-feature">Kilométrage :</span> 120.000 km</li>
+                <li><i class="fa-solid fa-gas-pump feature-icon"></i><span class="product-feature">Carburant :</span> Électrique</li>
+            </ul>
+            <p class="product-price">80 000 €</p>
+            <p class="contactez-nous"><b>Ce véhicule vous intéresse ?</b> Veuillez nous contacter au 06-06-06-06-06.</p>
+
+        </div>
+
+    </article>
+
+</section>
+
+{% endblock %}
