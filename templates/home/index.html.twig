@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!
-{% endblock %}
+{% block title %}V.Parrot{% endblock %}
 
 {% block body %}
 
+{# SECTION : Carrousel #}
 
 	<div id="carouselExample" class="carousel slide">
 
@@ -49,6 +49,8 @@
 
 	</div>
 
+{# SECTION : Services #}
+
 	<div class="services-container" id="services">
 
 		<h3 class="title-section">Nos Services</h3>
@@ -92,10 +94,12 @@
 
 	</div>
 
+{# SECTION : Nos véhicules d'occasions #}
+
 	<div class="occasion-container" id="occasions">
 
 		<h3 class="title-section">Nos véhicules d’occasions</h3>
-		<p class="subtitle-section">Achetez votre prochains véhicules sur le garage V.Parrot</p>
+		<p class="subtitle-section">Achetez votre prochain véhicule sur le garage V.Parrot</p>
 
 		<div class="occasion-cards">
 
@@ -108,7 +112,7 @@
 					<h6 class="model">AMG-G63</h6>
 					<p class="card-text">2002 | 5 places | Automatique | 120.000km | électrique</p>
 					<h5 class="price">80 000 €</h5>
-					<a href="#" class="btn btn-primary">Voir l'article</a>
+					<a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
 				</div>
 			</div>
 
@@ -127,7 +131,7 @@
 
 			<div class="card" style="width: 25rem;">
 
-				<img src="./img/car3.jpg" class="card-img-top" alt="...">
+				<img src="./img/car3.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
 
 				<div class="card-body">
 					<h5 class="card-title">Peugeot</h5>
@@ -140,10 +144,11 @@
 
 		</div>
 
-		<button type="button" class="btn btn-primary bouton">Nos véhicules</button>
+		<a href="{{ url('vehicules') }} " class="btn-link"><button type="button" class="btn btn-primary bouton">Nos véhicules</button></a>
 
 	</div>
 
+{# SECTION : Avis #}
 
 	<div id="carouselExampleDark" class="carousel carousel-dark slide" style="background-color: #eeeeee">
 
@@ -168,7 +173,7 @@
 
 						<div class="card-body avis-body">
 							<p class="avis-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur impedit ab. nda quia fugiat delectus saepe nulla modi facere excepturi porro eos quis corporis fugit velit eveniet nesciunt, ipsum possimus consequatur! Illum officiis ex possimus?
-								                     distinctio natus iure, ipsa dolores, exercitationem repellat. Qui dolor aspernatur nobis.</p>
+                            distinctio natus iure, ipsa dolores, exercitationem repellat. Qui dolor aspernatur nobis.</p>
 							<h5 class="last-name-avis">Nom</h5>
 							<h6 class="name-avis">Prénom</h6>
 						</div>
@@ -219,37 +224,5 @@
 		</button>
 
 	</div>
-
-	<footer>
-
-		<section class="info">
-
-        <img src="img/logo2.png" style="height:10em">
-        <ul>
-        <li>V. Parrot</li>
-        <li>06-06-06-06-06</li>
-        <li>v.parrot@legarageparrot.net</li>
-        <li>45 Av. Gen. Foch 31000 Toulouse</li>
-        </ul>
-
-        </section>
-
-		<section class="horaires">
-
-			<ul>
-                <li>Horaires d'ouverture :</li>
-				<li>lun:  08:45 - 12:00 , 14:00 - 18:00</li>
-				<li>mar:  08:45 - 12:00 , 14:00 - 18:00</li>
-				<li>mer:  08:45 - 12:00 , 14:00 - 18:00</li>
-				<li>jeu:  08:45 - 12:00 , 14:00 - 18:00</li>
-				<li>ven:  08:45 - 12:00 , 14:00 - 18:00</li>
-				<li>sam:  08:45 - 12:00 - fermé - fermé</li>
-				<li>dim:  fermé</li>
-			</ul>
-
-		</section>
-
-	</footer>
-
 
 {% endblock %}
