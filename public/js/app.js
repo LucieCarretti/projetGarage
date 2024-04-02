@@ -1,4 +1,4 @@
-// Page produit : gallerie d'images
+// Page produit : galerie d'images
 
 const yield = document.querySelector('.img-container > .product-img');
 const imgGallery = document.querySelectorAll('.img-gallery');
@@ -16,4 +16,4 @@ const pushImage = (image) => {
   yield.src = image.src;
 }
 
-// Fin Page produit : gallerie d'images
+// Fin Page produit : galerie d'images
