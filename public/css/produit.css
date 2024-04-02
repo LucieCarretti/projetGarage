@@ -11,13 +11,8 @@
 }
 
 .img-container{
-  /* background-image: url(../img/car1.jpg);
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: center;
-  background-size: cover; */
   width: 40%;
-  height: 26.9rem;
+  height: 27.4rem;
   border-radius: unset;
   margin-right: 2%;
   background-color: white;
@@ -28,6 +23,7 @@
 .product-img{
   width: 100%;
   object-fit: cover;
+  height: 21.5em;
 }
 
 .product-infos{
@@ -77,18 +73,17 @@
   max-width: 50rem;
 }
 
-.img-galerie{
-  background-image: url(../img/car1.jpg);
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: center;
-  background-size: cover;
-  width: 10rem;
-  height: 5rem;
+.img-gallery{
+  width: 7.2rem;
   margin: 0.5%;
+  transition: 0.4s;
 }
 
-.img-galerie:hover{
+.inactive{
   opacity: 0.5;
+}
+
+.img-gallery:hover{
+  opacity: 1;
   cursor: pointer;
 }
