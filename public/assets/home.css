@@ -1,0 +1,226 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 30rem;
+  }
+  
+  .carousel-control-prev {
+    justify-content: space-between;
+    margin-left: 1%;
+  }
+  
+  .carousel-control-next{
+    justify-content: end;
+    margin-right: 1%;
+  }
+  
+  .img-carousel{
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+  }
+  
+  .img-carousel1{
+    background-image: url(../img/ban1.jpg);
+    opacity: 0.55;
+  }
+  
+  .img-carousel2{
+    background-image: url(../img/ban2.jpg);
+    opacity: 0.55;
+  }
+  
+  .img-carousel3{
+    background-image: url(../img/ban3.jpg);
+    opacity: 0.55;
+  }
+  
+  .title-carousel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 11%;
+  }
+
+  .title-section{
+    font-size: 2rem;
+    color: #4D4D4D;
+    text-align: center;
+    padding-top: 1%;
+  }
+
+  .subtitle-section{
+    font-size: 1rem;
+    color: rgb(255, 70, 70);
+    text-align: center;
+  }
+
+  .services-cards{
+    display: flex;
+  }
+
+  .services{
+    width: 100%;
+  }
+
+  .img-service{
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+    width: 100%;
+    height: 10rem;
+    color: white;
+  }
+
+  .img-service1{
+    background-image: url(../img/serv1.jpg);
+    opacity: 0.7;
+  }
+
+  .img-service2{
+    background-image: url(../img/serv2.jpg);
+    opacity: 0.7;
+  }
+
+  .img-service3{
+    background-image: url(../img/serv3.jpg);
+    opacity: 0.7;
+  }
+
+  .img-service4{
+    background-image: url(../img/serv4.jpg);
+    opacity: 0.7;
+  }
+
+  .text-items{
+    position: relative;
+    top:-45%;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+  }
+
+.services-container {
+    background-color: #eeeeee;
+}
+
+.occasion-container {
+    background-color: white;
+    padding: 4em 0;
+}
+
+.occasion-cards {
+  display: flex !important;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 1em;
+}
+
+.card-img-top {
+  height: 16em;
+  object-fit: cover;
+}
+
+.card-text {
+  height: 3em;
+}
+
+.btn-primary {
+  background-color: rgb(255, 70, 70);
+  border-color: rgb(255, 70, 70);
+  border-radius: 10px;
+  margin-top: 0.7em;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: rgb(255, 70, 70);
+  border-color: rgb(255, 70, 70);;
+}
+
+.card {
+  box-shadow: 3px 3px 10px #bdbdbd;
+}
+
+.bouton {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 2em;
+    width: 10%;
+    border-radius: 15px;
+    font-size: larger;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avis-container{
+  background-color: #bdbdbd;
+}
+
+.carousel-caption {
+  position: static;
+}
+
+.avis{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+.card-avis {
+  margin: auto;
+}
+
+.img-avis {
+  height: 10rem;
+  object-fit: cover;
+}
+
+.avis-body {
+  height: 15rem;
+}
+
+.bouton-avis {
+  margin-top: 2em;
+}
+
+.subtitle-avis {
+  color: rgb(255, 70, 70);
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+
+.info > ul {
+  padding: 0;
+  text-align: center;
+}
+
+.horaires {
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
