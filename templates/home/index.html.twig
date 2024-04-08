@@ -1,186 +1,228 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}V.Parrot{% endblock %}
 
 {% block body %}
 
+{# SECTION : Carrousel #}
 
-<div id="carouselExample" class="carousel slide">
+	<div id="carouselExample" class="carousel slide">
 
-    <div class="carousel-inner">
-          <div class="carousel-item active">
-              <div class="d-block w-100">
-                  <div class="img-carousel img-carousel1"></div>
-                  <h2 class="title-carousel">SERVICES</h2>
-              </div> 
-          </div>
-    
-          <div class="carousel-item">
-              <div class="d-block w-100">
-                  <div class="img-carousel img-carousel2"></div>
-                  <h2 class="title-carousel">NOS OCCASIONS</h2>
-              </div> 
-          </div>
-    
-          <div class="carousel-item">
-              <div class="d-block w-100">
-                  <div class="img-carousel img-carousel3"></div>
-                  <h2 class="title-carousel">VOS AVIS</h2>
-              </div> 
-          </div>
-    </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="d-block w-100">
+					<div class="img-carousel img-carousel1"></div>
+					<a href="#services">
+						<h2 class="title-carousel">SERVICES</h2>
+					</a>
+				</div>
+			</div>
 
-</div>
+			<div class="carousel-item">
+				<div class="d-block w-100">
+					<div class="img-carousel img-carousel2"></div>
+					<a href="#occasions">
+						<h2 class="title-carousel">NOS OCCASIONS</h2>
+					</a>
+				</div>
+			</div>
 
-<div class="services-container">
+			<div class="carousel-item">
+				<div class="d-block w-100">
+					<div class="img-carousel img-carousel3"></div>
+					<a href="#avis">
+						<h2 class="title-carousel">VOS AVIS</h2>
+					</a>
+				</div>
+			</div>
+		</div>
 
-    <h3 class="title-section">Nos Services</h3>
-    <p class="subtitle-section">Retrouvez ici un accès rapide à nos services</p>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
 
-    <div class="services-cards">
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
 
-        <div class="services">
-            <div class="img-service img-service1"></div>
-            <div class="text-items">
-                <i class="fa-solid fa-gears"></i>
-                <p class="text-service">CONTROLE TECHNIQUE</p>
-            </div>
-        </div>
-        
-        <div class="services">
-            <div class="img-service img-service2"></div>
-            <div class="text-items">
-                <i class="fa-solid fa-car-battery"></i>
-                <p class="text-service">CHANGEMENT DE LA BATTERIE</p>
-            </div>
-        </div>
+	</div>
 
-        <div class="services">
-            <div class="img-service img-service3"></div>
-            <div class="text-items">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <p class="text-service">REPARATION</p>
-            </div>
-        </div>
+{# SECTION : Services #}
 
-        <div class="services">
-            <div class="img-service img-service4"></div>
-            <div class="text-items">
-                <i class="fa-solid fa-soap"></i>
-                <p class="text-service">LAVAGE/ENTRETIEN</p>
-            </div>
-        </div>
+	<div class="services-container" id="services">
 
-    </div>
+		<h3 class="title-section">Nos Services</h3>
+		<p class="subtitle-section">Retrouvez ici un accès rapide à nos services</p>
 
-</div>
+		<div class="services-cards">
 
-<div class="occasion-container">
+			<div class="services">
+				<div class="img-service img-service1"></div>
+				<div class="text-items">
+					<i class="fa-solid fa-gears"></i>
+					<p class="text-service">CONTROLE TECHNIQUE</p>
+				</div>
+			</div>
 
-    <h3 class="title-section">Nos véhicules d’occasions</h3>
-    <p class="subtitle-section">Achetez votre prochains véhicules sur le garage V.Parrot</p>
+			<div class="services">
+				<div class="img-service img-service2"></div>
+				<div class="text-items">
+					<i class="fa-solid fa-car-battery"></i>
+					<p class="text-service">CHANGEMENT DE LA BATTERIE</p>
+				</div>
+			</div>
 
-    <div class="occasion-cards">
+			<div class="services">
+				<div class="img-service img-service3"></div>
+				<div class="text-items">
+					<i class="fa-solid fa-screwdriver-wrench"></i>
+					<p class="text-service">REPARATION</p>
+				</div>
+			</div>
 
-        <div class="card" style="width: 25rem;">
+			<div class="services">
+				<div class="img-service img-service4"></div>
+				<div class="text-items">
+					<i class="fa-solid fa-soap"></i>
+					<p class="text-service">LAVAGE/ENTRETIEN</p>
+				</div>
+			</div>
 
-            <img src="./img/car1.jpg" class="card-img-top" alt="...">
+		</div>
 
-                <div class="card-body">
-                    <h5 class="card-title">Mercedes</h5>
-                    <h6 class="model">AMG-G63</h6>
-                    <p class="card-text">2002 | 5 places | Automatique | 120.000km | électrique</p>
-                    <h5 class="price">80 000 €</h5>
-                    <a href="#" class="btn btn-primary">Voir l'article</a>
-                </div>
-        </div>
+	</div>
 
-        <div class="card" style="width: 25rem;">
+{# SECTION : Nos véhicules d'occasions #}
 
-            <img src="./img/car2.jpg" class="card-img-top" alt="...">
+	<div class="occasion-container" id="occasions">
 
-                <div class="card-body">
-                    <h5 class="card-title">Subaru</h5>
-                    <h6 class="model">WRX STI S</h6>
-                    <p class="card-text">2018 | 5 places | Manuelle | 92 573km | essence</p>
-                    <h5 class="price">30 000 €</h5>
-                    <a href="#" class="btn btn-primary">Voir l'article</a>
-                </div>
-        </div>
+		<h3 class="title-section">Nos véhicules d’occasions</h3>
+		<p class="subtitle-section">Achetez votre prochain véhicule sur le garage V.Parrot</p>
 
-        <div class="card" style="width: 25rem;">
+		<div class="occasion-cards">
 
-            <img src="./img/car3.jpg" class="card-img-top" alt="...">
+			<div class="card" style="width: 25rem;">
 
-                <div class="card-body">
-                    <h5 class="card-title">Peugeot</h5>
-                    <h6 class="model">Peugeot 208</h6>
-                    <p class="card-text">2020 | 5 places | Automatique | 50 650km | essence</p>
-                    <h5 class="price">17 890 €</h5>
-                    <a href="#" class="btn btn-primary">Voir l'article</a>
-                </div>
-        </div>
-    
-    </div>
+				<img src="./img/car1.jpg" class="card-img-top">
 
-    <button type="button" class="btn btn-primary bouton">Nos véhicules</button>
-    
-</div>
+				<div class="card-body">
+					<h5 class="card-title">Mercedes</h5>
+					<h6 class="model">AMG-G63</h6>
+					<p class="card-text">2002 | 5 places | Automatique | 120.000km | électrique</p>
+					<h5 class="price">80 000 €</h5>
+					<a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
+				</div>
+			</div>
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide">
+			<div class="card" style="width: 25rem;">
 
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+				<img src="./img/car2.jpg" class="card-img-top" alt="...">
 
-  <div class="carousel-inner avis-container">
+				<div class="card-body">
+					<h5 class="card-title">Subaru</h5>
+					<h6 class="model">WRX STI S</h6>
+					<p class="card-text">2018 | 5 places | Manuelle | 92 573km | essence</p>
+					<h5 class="price">30 000 €</h5>
+					<a href="#" class="btn btn-primary">Voir l'article</a>
+				</div>
+			</div>
 
-    <div class="carousel-item avis active" data-bs-interval="10000">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
+			<div class="card" style="width: 25rem;">
 
-    <div class="carousel-item avis" data-bs-interval="2000">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
+				<img src="./img/car3.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
 
-    <div class="carousel-item avis">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
+				<div class="card-body">
+					<h5 class="card-title">Peugeot</h5>
+					<h6 class="model">Peugeot 208</h6>
+					<p class="card-text">2020 | 5 places | Automatique | 50 650km | essence</p>
+					<h5 class="price">17 890 €</h5>
+					<a href="#" class="btn btn-primary">Voir l'article</a>
+				</div>
+			</div>
 
-  </div>
+		</div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
+		<a href="{{ url('vehicules') }} " class="btn-link"><button type="button" class="btn btn-primary bouton">Nos véhicules</button></a>
 
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  
-</div>
+	</div>
 
+{# SECTION : Avis #}
+
+	<div id="carouselExampleDark" class="carousel carousel-dark slide" style="background-color: #eeeeee">
+
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+
+		<h3  id="avis" class="title-section" style="color: #4D4D4D">Vos avis comptent !</h3>
+		<a href="#" class="subtitle-avis">
+			<p class="subtitle-section" style="font-size: larger">Laissez votre avis !</p>
+		</a>
+
+		<div class="carousel-inner avis-container">
+
+			<div class="carousel-item avis active" data-bs-interval="10000">
+				<div class="carousel-caption d-none d-md-block">
+					<div class="card card-avis" style="width: 40%;">
+
+						<img src="./img/star.jpg" class="img-avis">
+
+						<div class="card-body avis-body">
+							<p class="avis-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur impedit ab. nda quia fugiat delectus saepe nulla modi facere excepturi porro eos quis corporis fugit velit eveniet nesciunt, ipsum possimus consequatur! Illum officiis ex possimus?
+                            distinctio natus iure, ipsa dolores, exercitationem repellat. Qui dolor aspernatur nobis.</p>
+							<h5 class="last-name-avis">Nom</h5>
+							<h6 class="name-avis">Prénom</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item avis" data-bs-interval="2000">
+				<div class="carousel-caption d-none d-md-block">
+					<div class="card card-avis" style="width: 40%;">
+
+						<img src="./img/star.jpg" class="img-avis">
+
+						<div class="card-body avis-body">
+							<p class="avis-text">blablablabla wow blablbalbla</p>
+							<h5 class="last-name-avis">Nom</h5>
+							<h6 class="name-avis">Prénom</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item avis">
+				<div class="carousel-caption d-none d-md-block">
+					<div class="card card-avis" style="width: 40%;">
+
+						<img src="./img/star.jpg" class="img-avis">
+
+						<div class="card-body avis-body">
+							<p class="avis-text">blablablabla wow blablbalbla</p>
+							<h5 class="last-name-avis">Nom</h5>
+							<h6 class="name-avis">Prénom</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+
+	</div>
 
 {% endblock %}

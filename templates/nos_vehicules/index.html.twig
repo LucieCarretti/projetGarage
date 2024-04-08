@@ -1,0 +1,178 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}V.Parrot - Nos véhicules{% endblock %}
+
+{% block body %}
+
+<nav class="vehicules-navbar">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" >Nos véhicules</li>
+        </ol>
+    </nav>
+</nav>
+
+<section class="vehicules-section">
+
+    <h3 class="title-section">Nos véhicules d’occasions</h3>
+    <p class="subtitle-section">Achetez votre prochain véhicule sur le garage V.Parrot</p>
+
+    <div class="occasion-cards vehicules-cards">
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car1.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Mercedes</h5>
+                <h6 class="model">AMG-G63</h6>
+                <p class="card-text">2002 | 5 places | Automatique | 120.000km | Électrique</p>
+                <h5 class="price">80 000 €</h5>
+                <a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car2.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Subaru</h5>
+                <h6 class="model">WRX STI S</h6>
+                <p class="card-text">2018 | 5 places | Manuelle | 92 573km | Essence</p>
+                <h5 class="price">30 000 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car3.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
+
+            <div class="card-body">
+                <h5 class="card-title">Peugeot</h5>
+                <h6 class="model">Peugeot 208</h6>
+                <p class="card-text">2020 | 5 places | Automatique | 50 650km | Essence</p>
+                <h5 class="price">17 890 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="occasion-cards vehicules-cards">
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car4.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
+
+            <div class="card-body">
+                <h5 class="card-title">Mitsubushi</h5>
+                <h6 class="model">Space Star</h6>
+                <p class="card-text">2022 | 5 places | Manuelle | 6 035km | Essence</p>
+                <h5 class="price">12 990 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car5.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
+
+            <div class="card-body">
+                <h5 class="card-title">Tesla</h5>
+                <h6 class="model">Max 5</h6>
+                <p class="card-text">2009 | 5 Places | Automatique | 9 000km | Électrique</p>
+                <h5 class="price">43 890 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+
+        <div class="card vehicules-card" style="width: 25rem;">
+            <img src="./img/car6.jpg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">Alpine</h5>
+                <h6 class="model">A 110</h6>
+                <p class="card-text">2021 | Places | Automatique | 56 260km | Essence</p>
+                <h5 class="price">55 900 €</h5>
+                <a href="#" class="btn btn-primary">Voir l'article</a>
+            </div>
+        </div>
+    
+    </div>
+
+</section>
+
+<section id="carouselExampleDark" class="carousel carousel-dark slide" style="background-color: #eeeeee">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <h3  id="avis" class="title-section" style="color: #4D4D4D">Vos avis comptent !</h3>
+    <a href="#" class="subtitle-avis">
+        <p class="subtitle-section" style="font-size: larger">Laissez votre avis !</p>
+    </a>
+
+    <div class="carousel-inner avis-container">
+
+        <div class="carousel-item avis active" data-bs-interval="10000">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="card card-avis" style="width: 40%;">
+
+                    <img src="./img/star.jpg" class="img-avis">
+
+                    <div class="card-body avis-body">
+                        <p class="avis-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur impedit ab. nda quia fugiat delectus saepe nulla modi facere excepturi porro eos quis corporis fugit velit eveniet nesciunt, ipsum possimus consequatur! Illum officiis ex possimus?
+                        distinctio natus iure, ipsa dolores, exercitationem repellat. Qui dolor aspernatur nobis.</p>
+                        <h5 class="last-name-avis">Nom</h5>
+                        <h6 class="name-avis">Prénom</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item avis" data-bs-interval="2000">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="card card-avis" style="width: 40%;">
+
+                    <img src="./img/star.jpg" class="img-avis">
+
+                    <div class="card-body avis-body">
+                        <p class="avis-text">blablablabla wow blablbalbla</p>
+                        <h5 class="last-name-avis">Nom</h5>
+                        <h6 class="name-avis">Prénom</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item avis">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="card card-avis" style="width: 40%;">
+
+                    <img src="./img/star.jpg" class="img-avis">
+
+                    <div class="card-body avis-body">
+                        <p class="avis-text">blablablabla wow blablbalbla</p>
+                        <h5 class="last-name-avis">Nom</h5>
+                        <h6 class="name-avis">Prénom</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</section>
+
+{% endblock %}
