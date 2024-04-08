@@ -9,6 +9,10 @@
   background-color: #ffa5a51a;
 }
 
+a {
+  color: white;
+}
+
 :root{
   --red: #ff4646;
   --red-font: #ff4646;
