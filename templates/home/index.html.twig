@@ -98,7 +98,25 @@
 
 	<div class="occasion-container" id="occasions">
 
-		<h3 class="title-section">Nos véhicules d’occasions</h3>
+		<div class="occasion-cards vehicules-cards">
+
+        {% for product in voiture %} {# //Pour l'affichage des données de l'entité voiture en front #}
+            <div class="card vehicules-card" style="width: 25rem;">
+                <img src={{ product.img }} class="card-img-top" alt="..." style="object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.marque }}</h5>
+                    <h6 class="model">{{ product.modele }}</h6>
+                    <p class="card-text">{{ product.anneeCirculation }} | {{ product.places }} places | {{ product.boiteVitesse }} | {{ product.km }} km | {{ product.carburant }}</p>
+                    <h5 class="price">{{ product.prix }} €</h5>
+                    <a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
+                </div>
+            </div>
+        {% endfor %}
+
+		</div>
+
+		{# <h3 class="title-section">Nos véhicules d’occasions</h3>
 		<p class="subtitle-section">Achetez votre prochain véhicule sur le garage V.Parrot</p>
 
 		<div class="occasion-cards">
@@ -141,9 +159,7 @@
 					<h5 class="price">17 890 €</h5>
 					<a href="#" class="btn btn-primary">Voir l'article</a>
 				</div>
-			</div>
-
-		</div>
+			</div> #}
 
 		<a href="{{ url('vehicules') }} " class="btn-link"><button type="button" class="btn btn-primary bouton">Nos véhicules</button></a>
 

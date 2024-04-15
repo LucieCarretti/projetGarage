@@ -39,6 +39,7 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            $user->setRoles(['ROLE_USER']);
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -55,7 +56,7 @@ class RegistrationController extends AbstractController
 
             // return $security->login($user, AppCustomAuthenticator::class, 'main');
 
-            return $this->redirectToRoute('app_voiture_index');
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('registration/register.html.twig', [

@@ -8,7 +8,6 @@ use App\Entity\Voiture;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
-// use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController; test lien register
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -47,7 +46,7 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'home');
         yield MenuItem::linkToCrud('Employés', 'fas fa-user', User::class);
-        // yield MenuItem::linkToCrud('Ajouter un employé', 'fas fa-plus', 'app_register'); test lien register
+        yield MenuItem::linkToRoute('Ajouter un employé', 'fas fa-plus', 'app_register');
         yield MenuItem::linkToCrud('Voitures', 'fas fa-car', Voiture::class);
     }
 }
