@@ -100,7 +100,7 @@
 
 		<div class="occasion-cards vehicules-cards">
 
-        {% for product in voiture %} {# //Pour l'affichage des données de l'entité voiture en front #}
+        {% for product in voiture|slice(0, 3) %} {# //Pour l'affichage des données de l'entité voiture en front #}
             <div class="card vehicules-card" style="width: 25rem;">
                 <img src={{ product.img }} class="card-img-top" alt="..." style="object-fit: cover;">
 
@@ -115,51 +115,6 @@
         {% endfor %}
 
 		</div>
-
-		{# <h3 class="title-section">Nos véhicules d’occasions</h3>
-		<p class="subtitle-section">Achetez votre prochain véhicule sur le garage V.Parrot</p>
-
-		<div class="occasion-cards">
-
-			<div class="card" style="width: 25rem;">
-
-				<img src="./img/car1.jpg" class="card-img-top">
-
-
-				<div class="card-body">
-					<h5 class="card-title">Mercedes</h5>
-					<h6 class="model">AMG-G63</h6>
-					<p class="card-text">2002 | 5 places | Automatique | 120.000km | électrique</p>
-					<h5 class="price">80 000 €</h5>
-					<a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
-				</div>
-			</div>
-
-			<div class="card" style="width: 25rem;">
-
-				<img src="./img/car2.jpg" class="card-img-top" alt="...">
-
-				<div class="card-body">
-					<h5 class="card-title">Subaru</h5>
-					<h6 class="model">WRX STI S</h6>
-					<p class="card-text">2018 | 5 places | Manuelle | 92 573km | essence</p>
-					<h5 class="price">30 000 €</h5>
-					<a href="#" class="btn btn-primary">Voir l'article</a>
-				</div>
-			</div>
-
-			<div class="card" style="width: 25rem;">
-
-				<img src="./img/car3.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
-
-				<div class="card-body">
-					<h5 class="card-title">Peugeot</h5>
-					<h6 class="model">Peugeot 208</h6>
-					<p class="card-text">2020 | 5 places | Automatique | 50 650km | essence</p>
-					<h5 class="price">17 890 €</h5>
-					<a href="#" class="btn btn-primary">Voir l'article</a>
-				</div>
-			</div> #}
 
 		<a href="{{ url('vehicules') }} " class="btn-link"><button type="button" class="btn btn-primary bouton">Nos véhicules</button></a>
 
