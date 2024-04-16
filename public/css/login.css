@@ -1,0 +1,42 @@
+.login-section{
+  padding-bottom: 38% !important;
+}
+
+.login-to-email{
+  /* color: rgb(83, 36, 36); */
+  font-weight: 500;
+}
+
+.logout-text{
+  color: var(--red);
+}
+
+.login-input{
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.login-input-title{
+  display: flex;
+}
+
+.login-input-enter{
+  height: 1.7em;
+  border-color: var(--red) !important;
+  border-radius: 0.5em;
+}
+
+.login-checkbox{
+  margin-top: 3%;
+}
+
+.login-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em !important;
+  height: 2em;
+}
