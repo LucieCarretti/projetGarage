@@ -1,9 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Voiture index{% endblock %}
+{% block title %}Voitures{% endblock %}
 
 {% block body %}
-    <h1>Voiture index</h1>
+
+<section class="form-section">
+    {% if app.user %}
+        <div class="mb-3">
+            Tu es connecté en tant que <span class="login-to-email">{{ app.user.userIdentifier }}</span>. <a href="{{ path('app_logout') }}" class="logout-text">Se déconnecter</a>
+        </div>
+        {% if app.user.userIdentifier == 'testadmin@gmail.com' %}
+            <a href="{{ path('admin') }}" class="logout-text">Accéder au dashboard</a>
+        {% endif %}
+    {% endif %}
+
+    <h1>Voitures</h1>
 
     <table class="table">
         <thead>
@@ -33,17 +44,19 @@
                 <td>{{ voiture.carburant }}</td>
                 <td>{{ voiture.prix }}</td>
                 <td>
-                    <a href="{{ path('app_voiture_show', {'id': voiture.id}) }}">show</a>
-                    <a href="{{ path('app_voiture_edit', {'id': voiture.id}) }}">edit</a>
+                    <a href="{{ path('app_voiture_show', {'id': voiture.id}) }}" class="logout-text">Afficher</a>
+                    <a href="{{ path('app_voiture_edit', {'id': voiture.id}) }}" class="logout-text">Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="10">no records found</td>
+                <td colspan="10">Pas de données</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_voiture_new') }}">Create new</a>
+    <a href="{{ path('app_voiture_new') }}">Créer</a>
+
+</section>
 {% endblock %}
