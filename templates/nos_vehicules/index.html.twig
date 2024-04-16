@@ -20,7 +20,7 @@
 
     <div class="occasion-cards vehicules-cards">
 
-        {% for product in voiture %} {# //Pour l'affichage des données de l'entité voiture en front #}
+        {% for product in voiture|slice(0, 3) %}
             <div class="card vehicules-card" style="width: 25rem;">
                 <img src={{ product.img }} class="card-img-top" alt="..." style="object-fit: cover;">
 
@@ -36,81 +36,39 @@
 
     </div>
 
-{#  
-        <div class="card vehicules-card" style="width: 25rem;">
-            <img src="./img/car1.jpg" class="card-img-top" alt="...">
+    <div class="occasion-cards vehicules-cards">
 
-            <div class="card-body">
-                <h5 class="card-title">Mercedes</h5>
-                <h6 class="model">AMG-G63</h6>
-                <p class="card-text">2002 | 5 places | Automatique | 120.000km | Électrique</p>
-                <h5 class="price">80 000 €</h5>
-                <a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
+        {% for product in voiture|slice(3, 3) %}
+            <div class="card vehicules-card" style="width: 25rem;">
+                <img src={{ product.img }} class="card-img-top" alt="..." style="object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.marque }}</h5>
+                    <h6 class="model">{{ product.modele }}</h6>
+                    <p class="card-text">{{ product.anneeCirculation }} | {{ product.places }} places | {{ product.boiteVitesse }} | {{ product.km }} km | {{ product.carburant }}</p>
+                    <h5 class="price">{{ product.prix }} €</h5>
+                    <a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
+                </div>
             </div>
-        </div>
-
-        <div class="card vehicules-card" style="width: 25rem;">
-            <img src="./img/car2.jpg" class="card-img-top" alt="...">
-
-            <div class="card-body">
-                <h5 class="card-title">Subaru</h5>
-                <h6 class="model">WRX STI S</h6>
-                <p class="card-text">2018 | 5 places | Manuelle | 92 573km | Essence</p>
-                <h5 class="price">30 000 €</h5>
-                <a href="#" class="btn btn-primary">Voir l'article</a>
-            </div>
-        </div>
-
-        <div class="card vehicules-card" style="width: 25rem;">
-            <img src="./img/car3.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
-
-            <div class="card-body">
-                <h5 class="card-title">Peugeot</h5>
-                <h6 class="model">Peugeot 208</h6>
-                <p class="card-text">2020 | 5 places | Automatique | 50 650km | Essence</p>
-                <h5 class="price">17 890 €</h5>
-                <a href="#" class="btn btn-primary">Voir l'article</a>
-            </div>
-        </div>
-#}
+        {% endfor %}
+    
+    </div>
 
     <div class="occasion-cards vehicules-cards">
 
-        <div class="card vehicules-card" style="width: 25rem;">
-            <img src="./img/car4.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
+        {% for product in voiture|slice(6, 9) %}
+            <div class="card vehicules-card" style="width: 25rem;">
+                <img src={{ product.img }} class="card-img-top" alt="..." style="object-fit: cover;">
 
-            <div class="card-body">
-                <h5 class="card-title">Mitsubushi</h5>
-                <h6 class="model">Space Star</h6>
-                <p class="card-text">2022 | 5 places | Manuelle | 6 035km | Essence</p>
-                <h5 class="price">12 990 €</h5>
-                <a href="#" class="btn btn-primary">Voir l'article</a>
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.marque }}</h5>
+                    <h6 class="model">{{ product.modele }}</h6>
+                    <p class="card-text">{{ product.anneeCirculation }} | {{ product.places }} places | {{ product.boiteVitesse }} | {{ product.km }} km | {{ product.carburant }}</p>
+                    <h5 class="price">{{ product.prix }} €</h5>
+                    <a href="{{ url('produit') }}" class="btn btn-primary">Voir l'article</a>
+                </div>
             </div>
-        </div>
-
-        <div class="card vehicules-card" style="width: 25rem;">
-            <img src="./img/car5.jpg" class="card-img-top" alt="..." style="object-fit: cover;">
-
-            <div class="card-body">
-                <h5 class="card-title">Tesla</h5>
-                <h6 class="model">Max 5</h6>
-                <p class="card-text">2009 | 5 Places | Automatique | 9 000km | Électrique</p>
-                <h5 class="price">43 890 €</h5>
-                <a href="#" class="btn btn-primary">Voir l'article</a>
-            </div>
-        </div>
-
-        <div class="card vehicules-card" style="width: 25rem;">
-            <img src="./img/car6.jpg" class="card-img-top" alt="...">
-
-            <div class="card-body">
-                <h5 class="card-title">Alpine</h5>
-                <h6 class="model">A 110</h6>
-                <p class="card-text">2021 | Places | Automatique | 56 260km | Essence</p>
-                <h5 class="price">55 900 €</h5>
-                <a href="#" class="btn btn-primary">Voir l'article</a>
-            </div>
-        </div>
+        {% endfor %}
     
     </div>
 
