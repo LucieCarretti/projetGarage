@@ -10,7 +10,7 @@
             Tu es connecté en tant que <span class="login-to-email">{{ app.user.userIdentifier }}</span>. <a href="{{ path('app_logout') }}" class="logout-text">Se déconnecter</a>
         </div>
         {% if app.user.userIdentifier == 'testadmin@gmail.com' %}
-            <a href="{{ path('admin') }}" class="logout-text">Accéder au dashboard</a>
+            <a href="{{ path('admin') }}" class="logout-text">Accès Administrateur</a>
         {% endif %}
     {% endif %}
 
