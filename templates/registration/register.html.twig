@@ -9,6 +9,10 @@
 
     <section class="form-section">
 
+    {% if app.user.userIdentifier == 'testadmin@gmail.com' %}
+        <a href="{{ path('admin') }}" class="logout-text">Retour au dashboard</a>
+    {% endif %}
+    
     <h1 class="form-title">Ajoutez un employé</h1>
 
     <div class="form-container">
