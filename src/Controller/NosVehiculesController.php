@@ -19,7 +19,7 @@ class NosVehiculesController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
-    #[Route('http://garage-vparrot.asso-fac.com/vehicules', name: 'vehicules')]
+    #[Route('/vehicules', name: 'vehicules')]
     public function index(): Response
     {
         //Pour l'affichage de l'entité voiture en front
