@@ -64,6 +64,33 @@
 
     {% block body %}{% endblock %}
 
+    {# <footer id="horaires">
+
+        <section class="info">
+
+        <img src="img/logo2.png" style="height:10em">
+        <ul>
+            <li>V. Parrot</li>
+            <li>06-06-06-06-06</li>
+            <li>v.parrot@legarageparrot.net</li>
+            <li>45 Av. Gen. Foch 31000 Toulouse</li>
+        </ul>
+
+        </section>
+
+        <section class="horaires">
+
+            <ul>
+                <li>Horaires d'ouverture :</li>
+                {% for horaires in horaire %}
+                    <li>{{ horaires.jour }}:  {{ horaires.ouverture_AM }} - {{ horaires.fermeture_AM }} , {{ horaires.ouverture_PM }} - {{ horaires.fermeture_PM }}</li>
+                {% endfor %}
+            </ul>
+
+        </section>
+
+    </footer> #}
+
     <footer id="horaires">
 
 
@@ -83,7 +110,7 @@
 
 			<ul>
                 <li>Horaires d'ouverture :</li>
-				<li>lun:  08:45 - 12:00 , 14:00 - 18:00</li>
+                <li>lun:  08:45 - 12:00 , 14:00 - 18:00</li>
 				<li>mar:  08:45 - 12:00 , 14:00 - 18:00</li>
 				<li>mer:  08:45 - 12:00 , 14:00 - 18:00</li>
 				<li>jeu:  08:45 - 12:00 , 14:00 - 18:00</li>
