@@ -19,7 +19,7 @@ class NosVehiculesController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
-    #[Route('/vehicules', name: 'vehicules')]
+    #[Route('http://garage-vparrot.asso-fac.com/vehicules', name: 'vehicules')]
     public function index(): Response
     {
         //Pour l'affichage de l'entité voiture en front
@@ -32,18 +32,3 @@ class NosVehiculesController extends AbstractController
         ]);
     }
 }
-
-// Aide de Caro
-
-    // use Symfony\Component\HttpFoundation\Request; //Etape 1 : Request pour l'affichage de l'entité voiture en front
-    // use Symfony\Component\HttpFoundation\Session\SessionInterface; // Etape 1 : pour l'affichage de l'entité voiture en front
-    
-    // public function index(Request $req, SessionInterface $session): Response #Ca je sais pas trop :')
-    // {
-    //     $repository = $this->entityManager->getRepository(Voiture::class); #Du coup ici on a une variable reporitsory qui va récupérer la table Voiture
-    //     $voitures = $repository->findAll(); #On créer une variable voiture et dedans on va sélécyionner toutes les voitures
-
-    //     return $this->render('home/index.html.twig', [
-    //         'voitures' => $voitures, #Puis pour ton twig, tout ce qui est égal à 'voiture' sera du coup la variable voiture
-    //     ]);
-    // }
