@@ -50,3 +50,23 @@ when@prod:
                     adapter: cache.app
                 doctrine.system_cache_pool:
                     adapter: cache.system
+
+doctrine_mongodb:
+    connections:
+        default:
+            server: 'mongodb://localhost:27017'
+            options:
+                username: 'user'
+                password: 'password'
+    default_database: 'projetGarage'
+    document_managers:
+        default:
+            auto_mapping: true
+            mappings:
+                App:
+                    is_bundle: false
+                    type: xml
+                    dir: '%kernel.project_dir%/src/Document'
+                    prefix: 'App\Document'
+                    alias: App
+           
