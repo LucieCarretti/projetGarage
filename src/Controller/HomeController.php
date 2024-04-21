@@ -2,69 +2,44 @@
 
 namespace App\Controller;
 
+use App\Entity\Voiture; //Pour l'affichage de l'entité voiture en front
 use App\Repository\AvisClientsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Doctrine\ODM\MongoDB\DocumentManager;
+use Doctrine\ORM\EntityManagerInterface; //Pour l'affichage de l'entité voiture en front
 
 class HomeController extends AbstractController
 {
     private $avisClientsRepository;
+    //Pour l'affichage de l'entité voiture en front
+    private $entityManager;
 
     public function __construct(
-        AvisClientsRepository $avisClientsRepository
+        AvisClientsRepository $avisClientsRepository,
+        EntityManagerInterface $entityManager
     ) {
         $this->avisClientsRepository = $avisClientsRepository;
+        $this->entityManager = $entityManager;
     }
 
     #[Route('/', name: 'home')]
     // paramètre injecter directement par doctrine
-    public function index(
-        /**DocumentManager $dm**/
-    ): Response
+    public function index(): Response
     {
-        //  // Récupérer l'ensemble des avis depuis la base de données et va mapper avec la l'entité créer la class avis.php
-        //  $avisRepository = $dm->getRepository(AvisClients::class);
 
-        // //  on lui demande de tout recuperer et de tout stocker dans une variable $avis (liste ou tableau)
-        //  $avis = $avisRepository->findAll();
-        
-        // $avisRepository = $this->documentManager->getDocumentCollection('AvisClients');
-        // $avis = $avisRepository->find();
+        //Pour l'affichage de l'entité voiture en front
+        $repository = $this->entityManager->getRepository(Voiture::class);
+        $voitures = $repository->findAll();
 
-        // $avis = $this->documentManager->getRepository('App\Document\AvisClients')->findAll();
-
+        //récupération des avis nosql
         $avis = $this->avisClientsRepository->findAll();
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'voiture' => $voitures, //Pour l'affichage de l'entité voiture en front
             'avis' => $avis,
         ]);
     }
 }
-
-// class HomeController extends AbstractController
-// {
-//     #[Route('/', name: 'home')]
-//     public function index(): Response
-//     {
-//         return $this->render('home/index.html.twig', [
-//             'controller_name' => 'HomeController',
-//         ]);
-//     }
-// }
-
-
- // // Créer une instance de Firebase / créer une connexion avec firestore (.json)
-        // $firebase = (new Factory)
-        //  ->withServiceAccount('./db/projetgarage-f654a-firebase-adminsdk-ne4bg-f2503116fb.json')
-        //  ->createDatabase();
-        
-        //   // Récupérer la référence collection "avis" de firebase
-        // $database = $factory->createDatabase();
-        // $avisRef = $database->getReference('avis');
-
-        // // Récupérer les données des avis depuis Firestore
-        // $snapshot = $avisRef->getSnapshot();
-        // $avis = $snapshot->getValue();

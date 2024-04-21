@@ -56,7 +56,7 @@ doctrine_mongodb:
         default:
             server: 'mongodb://localhost:27017'
             options:
-                username: 'user'
+                username: 'mongodb'
                 password: 'password'
     default_database: 'projetGarage'
     document_managers:
@@ -69,4 +69,3 @@ doctrine_mongodb:
                     dir: '%kernel.project_dir%/src/Document'
                     prefix: 'App\Document'
                     alias: App
-           

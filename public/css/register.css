@@ -48,11 +48,6 @@
     border-radius: 0.5em;
 }
 
-/* div {
-    /* display: grid;
-    margin-bottom: 5%;
-} */ 
-
 .btn {
     background-color: #ff4646;
     color: white;
@@ -71,4 +66,70 @@
 
 .register-agree > div > .required {
     margin-right: 2%;
+}
+
+.form-section {
+  background-color: white;
+  width: 100%;
+  height: 35em;
+  margin: auto;
+  padding-top: 2%;
+  padding-left: 1%;
+}
+
+.form-title {
+  text-align: center;
+  font-size: xx-large;
+  padding: 1em;
+  color: var(--red);
+}
+
+.form-container {
+  width: 20%;
+  text-align: center;
+  margin: auto;
+  background-color: #f8f7f7;
+  border-radius: 1em;
+  height: 18em;
+  align-content: center;
+}
+
+.required {
+  display: grid;
+  text-align: left;
+  margin-left: 15%;
+}
+
+.form-agree {
+  display: block;
+  text-align: right;
+  margin-right: 15%;
+  margin-top: 2%;
+}
+
+#registration_form_email, #registration_form_plainPassword {
+  width: 70%;
+  margin: auto;
+  border-color: var(--red) !important;
+  border-radius: 0.5em;
+}
+
+.btn {
+  background-color: var(--red);
+  color: white;
+  margin-top: 2em;
+}
+
+.form-email {
+  margin-bottom: 5%;
+}
+
+.form-agree > div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.form-agree > div > .required {
+  margin-right: 2%;
 }
