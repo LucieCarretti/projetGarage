@@ -22,9 +22,7 @@ class DashboardController extends AbstractDashboardController
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        return $this->redirect($adminUrlGenerator->setController()->generateUrl()); 
-
-        // (UserCrudController::class)
+        return $this->redirect($adminUrlGenerator->setController(UserCrudController::class)->generateUrl());
 
         // Option 2. You can make your dashboard redirect to different pages depending on the user
         //
@@ -46,10 +44,9 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        // yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'home');
-        yield MenuItem::linkToCrud('user', 'fas fa-map-marker-alt', User::class);
-        yield MenuItem::linkToCrud('voiture', 'fas fa-comments', Voiture::class);
+        yield MenuItem::linkToCrud('Employés', 'fas fa-user', User::class);
+        yield MenuItem::linkToRoute('Ajouter un employé', 'fas fa-plus', 'app_register');
+        yield MenuItem::linkToCrud('Voitures', 'fas fa-car', Voiture::class);
     }
 }

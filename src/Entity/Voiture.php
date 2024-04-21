@@ -37,6 +37,9 @@ class Voiture
     #[ORM\Column]
     private ?float $prix = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $img = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -134,6 +137,18 @@ class Voiture
     public function setPrix(float $prix): static
     {
         $this->prix = $prix;
+
+        return $this;
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->img;
+    }
+
+    public function setImg(?string $img): static
+    {
+        $this->img = $img;
 
         return $this;
     }

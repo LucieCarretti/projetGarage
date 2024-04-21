@@ -4,9 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationFormType;
-use App\Security\AppCustomAuthenticator;
 use App\Security\EmailVerifier;
-use App\Security\LoginFormAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -41,6 +39,7 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            $user->setRoles(['ROLE_USER']);
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -57,7 +56,7 @@ class RegistrationController extends AbstractController
 
             // return $security->login($user, AppCustomAuthenticator::class, 'main');
 
-            return $this->redirectToRoute('app_voiture_index');
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('registration/register.html.twig', [
