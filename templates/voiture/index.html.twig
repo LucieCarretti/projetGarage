@@ -9,6 +9,8 @@
         <div class="mb-3">
             Tu es connecté en tant que <span class="login-to-email">{{ app.user.userIdentifier }}</span>. <a href="{{ path('app_logout') }}" class="logout-text">Se déconnecter</a>
         </div>
+        <a href="{{ path('app_horaires_index') }}" class="logout-text">Horaires</a>
+        <a href="{{ path('app_services_index') }}" class="logout-text">Services</a>
         {% if app.user.userIdentifier == 'testadmin@gmail.com' %}
             <a href="{{ path('admin') }}" class="logout-text">Accès Administrateur</a>
         {% endif %}

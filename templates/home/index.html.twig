@@ -51,48 +51,26 @@
 
 {# SECTION : Services #}
 
-	<div class="services-container" id="services">
+    <div class="services-container" id="services">
 
-		<h3 class="title-section">Nos Services</h3>
-		<p class="subtitle-section">Retrouvez ici un accès rapide à nos services</p>
+        <h3 class="title-section">Nos Services</h3>
+        <p class="subtitle-section">Retrouvez ici un accès rapide à nos services</p>
 
-		<div class="services-cards">
+        <div class="services-cards">
 
-			<div class="services">
-				<div class="img-service img-service1"></div>
-				<div class="text-items">
-					<i class="fa-solid fa-gears"></i>
-					<p class="text-service">CONTROLE TECHNIQUE</p>
-				</div>
-			</div>
+        {% for i in service %}
+            <div class="services">
+                <div class="img-service" style="background-image: {{i.bgimg}};"></div>
+                <div class="text-items">
+                    <i class="{{i.icone}}"></i>
+                    <p class="text-service">{{i.nom|upper}}</p>
+                </div> 
+            </div>
+        {% endfor %}
 
-			<div class="services">
-				<div class="img-service img-service2"></div>
-				<div class="text-items">
-					<i class="fa-solid fa-car-battery"></i>
-					<p class="text-service">CHANGEMENT DE LA BATTERIE</p>
-				</div>
-			</div>
+        </div>
 
-			<div class="services">
-				<div class="img-service img-service3"></div>
-				<div class="text-items">
-					<i class="fa-solid fa-screwdriver-wrench"></i>
-					<p class="text-service">REPARATION</p>
-				</div>
-			</div>
-
-			<div class="services">
-				<div class="img-service img-service4"></div>
-				<div class="text-items">
-					<i class="fa-solid fa-soap"></i>
-					<p class="text-service">LAVAGE/ENTRETIEN</p>
-				</div>
-			</div>
-
-		</div>
-
-	</div>
+    </div>
 
 {# SECTION : Nos véhicules d'occasions #}
 
@@ -136,9 +114,7 @@
         </div>
 
         <h3 id="avis" class="title-section" style="color: #4D4D4D">Vos avis comptent !</h3>
-        <a href="#" class="subtitle-avis">
-            <p class="subtitle-section" style="font-size: larger">Laissez votre avis !</p>
-        </a>
+            <p class="subtitle-avis subtitle-section" style="font-size: larger">Laissez votre avis !</p>
 
         <div class="carousel-inner avis-container">
 

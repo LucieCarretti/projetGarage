@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Voiture; //Pour l'affichage de l'entité voiture en front
+use App\Entity\Services;
 use App\Repository\AvisClientsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -41,6 +42,9 @@ class HomeController extends AbstractController
         $repository = $this->entityManager->getRepository(Voiture::class);
         $voitures = $repository->findAll();
 
+        $repository = $this->entityManager->getRepository(Services::class);
+        $services = $repository->findAll();
+
         // verifie que la méthode est bien post
         // gestion du retour du formulaire
         // ajout d'un nouveau champs caché lors du submit du form
@@ -78,6 +82,7 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'voiture' => $voitures, //Pour l'affichage de l'entité voiture en front
+            'service' => $services, //Pour l'affichage de l'entité services en front
             'avis' => $avis, //envoie des avis au front
             'csrf_token' => $csrf_token // envoie le token au front
         ]);

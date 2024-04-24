@@ -52,8 +52,6 @@ class RegistrationController extends AbstractController
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
 
-            // do anything else you need here, like send an email
-
             // return $security->login($user, AppCustomAuthenticator::class, 'main');
 
             return $this->redirectToRoute('admin');

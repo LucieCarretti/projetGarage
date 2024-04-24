@@ -2,9 +2,12 @@
 
 namespace App\Controller\Admin;
 
+use App\Document\AvisClients;
+use App\Entity\AvisClientsEntity;
 use App\Entity\User;
 use App\Entity\Voiture;
 
+use App\Entity\Services;
 use App\Entity\Horaires;
 
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
@@ -51,6 +54,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Employés', 'fas fa-user', User::class);
         yield MenuItem::linkToRoute('Ajouter un employé', 'fas fa-plus', 'app_register');
         yield MenuItem::linkToCrud('Voitures', 'fas fa-car', Voiture::class);
+        yield MenuItem::linkToCrud('Services', 'fas fa-list-check', Services::class);
         yield MenuItem::linkToCrud('Horaires', 'fas fa-calendar-days', Horaires::class);
+        yield MenuItem::linkToUrl('Avis Clients', 'fas fa-clipboard', 'https://google.com/');
     }
 }
