@@ -56,6 +56,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Voitures', 'fas fa-car', Voiture::class);
         yield MenuItem::linkToCrud('Services', 'fas fa-list-check', Services::class);
         yield MenuItem::linkToCrud('Horaires', 'fas fa-calendar-days', Horaires::class);
-        yield MenuItem::linkToUrl('Avis Clients', 'fas fa-clipboard', 'https://google.com/');
+        yield MenuItem::linkToRoute('Avis Clients', 'fas fa-clipboard', 'app_avis_clients');
     }
 }

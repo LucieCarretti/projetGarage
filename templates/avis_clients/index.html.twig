@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Avis Clients Controller{% endblock %}
+
+{% block body %}
+
+<div class="tableau">
+
+    <table class="table table-striped">
+
+        <thead class="head_tableau">
+            <tr>
+                <th>id</th>
+                <th>nom</th>
+                <th>prenom</th>
+                <th>contenu</th>
+                <th>etoiles</th>
+                <th>affiche</th>
+                <th>action</th>
+            </tr>
+        </thead>
+
+        {# boucle pour afficher les variables de nos avis dans un tableau #}
+
+        <tbody class="body_tableau">
+            {% for avis in avisClients %}
+            <tr>
+                <td>{{avis.id}}</td>
+                <td>{{avis.nom}}</td>
+                <td>{{avis.prenom}}</td>
+                <td>{{avis.contenu}}</td>
+                <td>{{avis.etoiles}}</td>
+                <td>{{ avis.affiche ? "Oui" : "Non" }}</td> {#ternaire : <condition valide> : <condition invalide>#}
+                <td>
+                    <a href="{{ path('avis_clients_edit', { id: avis.id }) }}" class="btn btn-primary">{{ avis.affiche ? "Masquer" : "Afficher" }}</a>
+                    <a href="{{ path('avis_clients_delete', { id: avis.id }) }}" class="btn btn-danger">Supprimer</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}
