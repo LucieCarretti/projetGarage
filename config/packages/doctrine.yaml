@@ -54,10 +54,10 @@ when@prod:
 doctrine_mongodb:
     connections:
         default:
-            server: 'mongodb://localhost:27017'
+            server: 'mongodb+srv://cluster0.6vaf4bd.mongodb.net/'
             options:
                 username: 'mongodb'
-                password: 'password'
+                password: 'Waayose3Yka31SMx'
     default_database: 'projetGarage'
     document_managers:
         default:

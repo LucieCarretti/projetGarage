@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Voiture; //Pour l'affichage de l'entité voiture en front
+use App\Entity\Horaires;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,8 +27,12 @@ class NosVehiculesController extends AbstractController
         $repository = $this->entityManager->getRepository(Voiture::class);
         $voitures = $repository->findAll();
 
+        $repository = $this->entityManager->getRepository(Horaires::class);
+        $horaires = $repository->findAll();
+
         return $this->render('nos_vehicules/index.html.twig', [
             'voiture' => $voitures, //Pour l'affichage de l'entité voiture en front
+            'horaire' => $horaires,
             'controller_name' => 'NosVehiculesController',
         ]);
     }

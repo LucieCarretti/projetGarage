@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Voiture; //Pour l'affichage de l'entité voiture en front
 use App\Entity\Services;
+use App\Entity\Horaires;
 use App\Repository\AvisClientsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -45,6 +46,9 @@ class HomeController extends AbstractController
         $repository = $this->entityManager->getRepository(Services::class);
         $services = $repository->findAll();
 
+        $repository = $this->entityManager->getRepository(Horaires::class);
+        $horaires = $repository->findAll();
+
         // verifie que la méthode est bien post
         // gestion du retour du formulaire
         // ajout d'un nouveau champs caché lors du submit du form
@@ -84,6 +88,7 @@ class HomeController extends AbstractController
             'voiture' => $voitures, //Pour l'affichage de l'entité voiture en front
             'service' => $services, //Pour l'affichage de l'entité services en front
             'avis' => $avis, //envoie des avis au front
+            'horaire' => $horaires,
             'csrf_token' => $csrf_token // envoie le token au front
         ]);
     }
