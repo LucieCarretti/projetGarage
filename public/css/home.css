@@ -184,6 +184,8 @@
 
 .card-avis {
   margin: auto;
+  height: 25rem;
+  width: 60% !important;
 }
 
 .img-avis {
@@ -193,6 +195,7 @@
 
 .avis-body {
   height: 15rem;
+  align-content: center;
 }
 
 .bouton-avis {
@@ -201,4 +204,20 @@
 
 .subtitle-avis {
   color: var(--red);
+}
+
+/* form */
+
+.form-avis {
+background-color: white;
+text-align: center;
+padding-bottom: 2em;
+}
+
+#hiddenFormWrapper {
+  display: none;
+}
+
+.btn:hover {
+  border: 2px solid #ff4646;
 }

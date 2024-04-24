@@ -7,7 +7,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 
 /**
- * @MongoDB\Document(collection="avis")
+ * @MongoDB\Document(collection="AvisClients")
  */
 class AvisClients 
 {
@@ -112,4 +112,12 @@ class AvisClients
 
         return $this;
     }
+
+    //methode setteur
+            // theorie : $variable = new TYPE(rien);
+            //$variable->setAttribut($valeur);  
+            //$variable->setAttribut($valeur);  
+            //$variable->setAttribut($valeur);  
+            //$variable->setAttribut($valeur);  
+            //$variable->setAttribut($valeur);
 }

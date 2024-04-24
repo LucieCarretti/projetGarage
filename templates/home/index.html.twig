@@ -119,90 +119,85 @@
 
 		</div>
 
-		<a href="{{ url('vehicules') }} " class="btn-link"><button type="button" class="btn btn-primary bouton">Nos véhicules</button></a>
+		<a href="{{ url('vehicules') }}" class="btn-link"><button type="button" class="btn btn-primary bouton">Nos véhicules</button></a>
 
 	</div>
+
+	
 
 {# SECTION : Avis #}
 
-	<div id="carouselExampleDark" class="carousel carousel-dark slide" style="background-color: #eeeeee">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" style="background-color: #eeeeee">
 
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-		</div>
+        <div class="carousel-indicators">
+            {% for i in 0..(avis|length - 1) %}
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ i }}" class="{{ (loop.index == 1) ? 'active' : '' }}" aria-current="{{ (loop.index == 1) ? 'true' : 'false' }}" aria-label="Slide {{ loop.index + 1 }}"></button>
+            {% endfor %}
+        </div>
 
-		<h3  id="avis" class="title-section" style="color: #4D4D4D">Vos avis comptent !</h3>
-		<a href="#" class="subtitle-avis">
-			<p class="subtitle-section" style="font-size: larger">Laissez votre avis !</p>
-		</a>
+        <h3 id="avis" class="title-section" style="color: #4D4D4D">Vos avis comptent !</h3>
+        <a href="#" class="subtitle-avis">
+            <p class="subtitle-section" style="font-size: larger">Laissez votre avis !</p>
+        </a>
 
-		<div class="carousel-inner avis-container">
+        <div class="carousel-inner avis-container">
 
-			<div class="carousel-item avis active" data-bs-interval="10000">
-				<div class="carousel-caption d-none d-md-block">
-					<div class="card card-avis" style="width: 40%;">
+		{# permet d'afficher la variable qu'on veut / meme principe qu'un console.log #}
+		{# {{ dump(avis) }} #}
 
+            {% for unAvis in avis %}
+                <div class="carousel-item avis {% if loop.first %}active{% endif %}" data-bs-interval="10000">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="card card-avis" style="width: 40%;">
+                            <div class="card-body avis-body">
+                                <p class="avis-text">{{ unAvis.contenu }}</p>
+                                <h5 class="last-name-avis">{{ unAvis.nom }}</h5>
+                                <h6 class="name-avis">{{ unAvis.prenom }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
 
-						<img src="./img/star.jpg" class="img-avis">
+        </div>
 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
 
-						<div class="card-body avis-body">
-							<p class="avis-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-							<h5 class="last-name-avis">Nom</h5>
-							<h6 class="name-avis">Prénom</h6>
-						</div>
-					</div>
-				</div>
-			</div>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+		
+    </div>
 
-			<div class="carousel-item avis" data-bs-interval="2000">
-				<div class="carousel-caption d-none d-md-block">
-					<div class="card card-avis" style="width: 40%;">
+<section class="form-avis">
 
+   <button id="toggleForm" class="btn">Donnez votre Avis</button>
 
-						<img src="./img/star.jpg" class="img-avis">
+<div id="hiddenFormWrapper">
+  <form id="hiddenForm" action="{{ url('home') }}#AvisSubmit"  method="post">
 
+	{# création d'un token pour rendre le formulaire unique #}
+	<input type="hidden" name="csrf_token" value="{{csrf_token}}">
+	
+    <label for="nom">Nom:</label><br>
+    <input type="text" id="nom" name="nom"><br>
 
-						<div class="card-body avis-body">
-							<p class="avis-text">blablablabla wow blablbalbla</p>
-							<h5 class="last-name-avis">Nom</h5>
-							<h6 class="name-avis">Prénom</h6>
-						</div>
-					</div>
-				</div>
-			</div>
+	<label for="nom">Prenom:</label><br>
+    <input type="text" id="prenom" name="prenom"><br>
 
-			<div class="carousel-item avis">
-				<div class="carousel-caption d-none d-md-block">
-					<div class="card card-avis" style="width: 40%;">
+    <label for="contenu">Avis:</label></br>
+    <textarea name="contenu" id="comment" cols="50" rows="10" minlenght="15" maxlenght="250"></textarea>
+     <span class="error" id="client_err"></span><br>
 
+	 <input type="submit" value="Envoyer" id="AvisSubmit">
 
-						<img src="./img/star.jpg" class="img-avis">
-
-
-						<div class="card-body avis-body">
-							<p class="avis-text">blablablabla wow blablbalbla</p>
-							<h5 class="last-name-avis">Nom</h5>
-							<h6 class="name-avis">Prénom</h6>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
+  </form>
 
 	</div>
+</section>
 
 {% endblock %}

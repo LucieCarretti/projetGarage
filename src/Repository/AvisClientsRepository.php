@@ -21,6 +21,25 @@ class AvisClientsRepository extends DocumentRepository
         return $this->documentManager->getRepository(AvisClients::class)->findAll();
     }
 
+    public function findByAffiche($affiche): array
+    {
+        return $this->documentManager->getRepository(AvisClients::class)->findBy(['affiche' => $affiche]);
+    }
+
+    public function insert($nom, $prenom, $contenu): void
+    // on créer un objet Avis Clients et de cet avis on set les champs avec les input qu'on a récupéré
+    {
+        $avisClient = new AvisClients();
+        $avisClient->setNom($nom);
+        $avisClient->setPrenom($prenom);
+        $avisClient->setContenu($contenu);
+        $avisClient->setAffiche(false);
+       
+
+        $this->documentManager->persist($avisClient);
+        $this->documentManager->flush();
+    }
+
     // public function findBy(array $criteria, ?array $orderBy = null, $limit = null, $offset = null): array
     // {
     //     return $this->documentManager->getRepository(AvisClients::class)->findBy($criteria);
