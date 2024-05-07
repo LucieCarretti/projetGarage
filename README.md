@@ -75,15 +75,19 @@ Lancer le projet sur Visual Studio Code
 Installer le framework Symfony 
 Creer un nouveau projet
 ```symfony new --webapp nom_du_dossier```
+
 installer le certificat d'authentification
 ```symfony server:ca:install```
+
 installer mongodb 
 ```composer require mongodb/mongo db
 composer require mongodb/mongodb-odm```
+
 pour créer une base de donnée SQL
 ```symfony console doctrine:database:create```
 depuis votre .env
 lié votre base de donnée SQL
+
 implémenter une entité dans une BDD
 ```symfony console make:user
 symfony console make:migration
